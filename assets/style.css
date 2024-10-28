@@ -5,9 +5,9 @@ body {
   margin: 0;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("https://mega.com.vn/media/news/1507_hinh-nen-spider-man-dep7.jpg");
-  background-size: cover, cover, cover;
+  /* background-size: cover, cover, cover; */
   background-position: center, center, center;
-  background-repeat: no-repeat, no-repeat, no-repeat;
+  /* background-repeat: no-repeat, no-repeat, no-repeat; */
 }
 .container {
   background-color: rgba(222, 208, 208, 0.274);
