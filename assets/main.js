@@ -363,7 +363,7 @@ let questions = [
 let currentQuestionIndex = null;
 let answeredQuestions = new Set();
 let timer;
-let timeLimit = 60; // Thời gian tối đa là 60 giây
+let timeLimit = 300; // Thời gian tối đa là 60 giây
 let timeLeft;
 
 function startGame() {
@@ -503,8 +503,12 @@ function startTimer() {
 }
 
 function updateTimerDisplay(time) {
+  const minutes = Math.floor(time / 60); // Lấy số phút
+  const seconds = time % 60; // Lấy số giây còn lại
+  const formattedSeconds = seconds < 10 ? `0${seconds}` : seconds; // Định dạng giây với 2 chữ số
+
   const timerDisplay = document.getElementById("timer-display");
-  timerDisplay.innerText = ` ${time} giây`;
+  timerDisplay.innerText = `${minutes}:${formattedSeconds}`; // Hiển thị định dạng phút:giây
 }
 
 document.getElementById("next-btn").addEventListener("click", () => {
