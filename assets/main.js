@@ -363,7 +363,7 @@ let questions = [
 let currentQuestionIndex = null;
 let answeredQuestions = new Set();
 let timer;
-let timeLimit = 20; // Thời gian tối đa là 20 giây
+let timeLimit = 60; // Thời gian tối đa là 60 giây
 let timeLeft;
 
 function startGame() {
@@ -504,7 +504,7 @@ function startTimer() {
 
 function updateTimerDisplay(time) {
   const timerDisplay = document.getElementById("timer-display");
-  timerDisplay.innerText = `Thời gian còn lại: ${time} giây`;
+  timerDisplay.innerText = ` ${time} giây`;
 }
 
 document.getElementById("next-btn").addEventListener("click", () => {

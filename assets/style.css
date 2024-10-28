@@ -45,3 +45,8 @@ h1 {
   color: #333;
   border-radius: 10px;
 }
+.timeSecon {
+  color: red;
+  font-weight: bold;
+  font-size: 25px;
+}
