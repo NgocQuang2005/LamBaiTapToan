@@ -209,7 +209,7 @@ let questions = [
     type: "choice",
   },
   {
-    question: "15 + 2 là bao nhiêu?",
+    question: "15 + 2 là bằng bao nhiêu?",
     answers: [
       { text: "16", correct: true },
       { text: "17", correct: false },
@@ -219,7 +219,7 @@ let questions = [
     type: "choice",
   },
   {
-    question: "25 - 10 là bao nhiêu?",
+    question: "25 - 10 là bằng bao nhiêu?",
     answers: [
       { text: "15", correct: true },
       { text: "10", correct: false },
@@ -229,7 +229,7 @@ let questions = [
     type: "choice",
   },
   {
-    question: "30 + 5 là bao nhiêu?",
+    question: "30 + 5 là bằng bao nhiêu?",
     answers: [
       { text: "35", correct: true },
       { text: "30", correct: false },
@@ -239,7 +239,7 @@ let questions = [
     type: "choice",
   },
   {
-    question: "40 - 20 là bao nhiêu?",
+    question: "40 - 20 là bằng bao nhiêu?",
     answers: [
       { text: "20", correct: true },
       { text: "25", correct: false },
@@ -249,7 +249,7 @@ let questions = [
     type: "choice",
   },
   {
-    question: "50 + 10 là bao nhiêu?",
+    question: "50 + 10 là bằng bao nhiêu?",
     answers: [
       { text: "60", correct: true },
       { text: "50", correct: false },
@@ -259,7 +259,7 @@ let questions = [
     type: "choice",
   },
   {
-    question: "70 - 30 là bao nhiêu?",
+    question: "70 - 30 là bằng bao nhiêu?",
     answers: [
       { text: "40", correct: true },
       { text: "50", correct: false },
@@ -269,7 +269,7 @@ let questions = [
     type: "choice",
   },
   {
-    question: "35 + 15 là bao nhiêu?",
+    question: "35 + 15 là bằng bao nhiêu?",
     answers: [
       { text: "50", correct: true },
       { text: "45", correct: false },
@@ -279,7 +279,7 @@ let questions = [
     type: "choice",
   },
   {
-    question: "80 - 40 là bao nhiêu?",
+    question: "80 - 40 là bằng bao nhiêu?",
     answers: [
       { text: "40", correct: true },
       { text: "50", correct: false },
@@ -289,7 +289,7 @@ let questions = [
     type: "choice",
   },
   {
-    question: "20 + 20 là bao nhiêu?",
+    question: "20 + 20 là bằng bao nhiêu?",
     answers: [
       { text: "40", correct: true },
       { text: "30", correct: false },
@@ -299,7 +299,7 @@ let questions = [
     type: "choice",
   },
   {
-    question: "45 - 5 là bao nhiêu?",
+    question: "45 - 5 là bằng bao nhiêu?",
     answers: [
       { text: "40", correct: true },
       { text: "35", correct: false },
@@ -309,7 +309,7 @@ let questions = [
     type: "choice",
   },
   {
-    question: "60 + 20 là bao nhiêu?",
+    question: "60 + 20 là bằng bao nhiêu?",
     answers: [
       { text: "80", correct: true },
       { text: "70", correct: false },
@@ -319,7 +319,7 @@ let questions = [
     type: "choice",
   },
   {
-    question: "90 - 50 là bao nhiêu?",
+    question: "90 - 50 là bằng bao nhiêu?",
     answers: [
       { text: "40", correct: true },
       { text: "30", correct: false },
@@ -329,7 +329,7 @@ let questions = [
     type: "choice",
   },
   {
-    question: "25 + 25 là bao nhiêu?",
+    question: "25 + 25 là bằng bao nhiêu?",
     answers: [
       { text: "50", correct: true },
       { text: "45", correct: false },
@@ -339,7 +339,7 @@ let questions = [
     type: "choice",
   },
   {
-    question: "100 - 10 là bao nhiêu?",
+    question: "100 - 10 là bằng bao nhiêu?",
     answers: [
       { text: "90", correct: true },
       { text: "80", correct: false },
@@ -349,7 +349,7 @@ let questions = [
     type: "choice",
   },
   {
-    question: "30 + 30 là bao nhiêu?",
+    question: "30 + 30 là bằng bao nhiêu?",
     answers: [
       { text: "60", correct: true },
       { text: "50", correct: false },
@@ -363,7 +363,7 @@ let questions = [
 let currentQuestionIndex = null;
 let answeredQuestions = new Set();
 let timer;
-let timeLimit = 300; // Thời gian tối đa là 60 giây
+let timeLimit = 300; // Thời gian tối đa là bằng 60 giây
 let timeLeft;
 
 function startGame() {
@@ -429,9 +429,7 @@ function selectAnswer(e) {
 
   showModal(
     "alertModal",
-    correct
-      ? "Chúc mừng Ngọc Sáng đã trả lời đúng!"
-      : "Rất tiếc, Ngọc Sáng đã trả lời sai."
+    correct ? "Chúc mừng Bé đã trả lời đúng!" : "Rất tiếc, Bé đã trả lời sai."
   );
 
   showCorrectAnswer();
@@ -450,7 +448,7 @@ function selectAnswer(e) {
   document.getElementById("question-container").classList.add("d-none");
   document.getElementById("question-grid").classList.remove("d-none");
 
-  // Hiện nút reset để Ngọc Sáng có thể chơi lại
+  // Hiện nút reset để Bé có thể chơi lại
   document.getElementById("reset-btn").style.display = "block"; // Hiện nút reset
 }
 
@@ -522,7 +520,7 @@ document.getElementById("next-btn").addEventListener("click", () => {
   if (answeredQuestions.size === questions.length) {
     showModal(
       "completionModal",
-      "Ngọc Sáng đã hoàn thành tất cả các câu hỏi! Chúc mừng Ngọc Sáng!"
+      "Bé đã hoàn thành tất cả các câu hỏi! Chúc mừng Bé!"
     );
   }
 });
