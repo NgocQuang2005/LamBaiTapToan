@@ -377,7 +377,7 @@ function createQuestionBoxes() {
   grid.innerHTML = "";
   questions.forEach((_, index) => {
     const box = document.createElement("button");
-    box.classList.add("btn", "btn-outline-primary", "m-2", "p-3");
+    box.classList.add("btn", "btn-outline-primary", "m-2", "p-3", "btnCauhoi");
     box.innerText = "?"; // Hiển thị dấu "?" thay vì số câu hỏi
     box.addEventListener("click", () => selectQuestion(index));
     grid.appendChild(box);
@@ -426,11 +426,20 @@ function resetState() {
 function selectAnswer(e) {
   const selectedButton = e.target;
   const correct = selectedButton.dataset.correct === "true";
+  const currentQuestion = questions[currentQuestionIndex];
 
-  showModal(
-    "alertModal",
-    correct ? "Chúc mừng Bé đã trả lời đúng!" : "Rất tiếc, Bé đã trả lời sai."
-  );
+  if (correct) {
+    showModal("alertModal", `Chúc mừng Bé đã trả lời đúng!`);
+  } else {
+    // Lấy đáp án đúng từ danh sách câu trả lời
+    const correctAnswer = currentQuestion.answers.find(
+      (answer) => answer.correct
+    ).text;
+    showModal(
+      "alertModal",
+      `Rất tiếc, Bé đã trả lời sai.\n Đề bài: "${currentQuestion.question}". \nĐáp án đúng là: ${correctAnswer}.`
+    );
+  }
 
   showCorrectAnswer();
   document.getElementById("next-btn").style.display = "block";
