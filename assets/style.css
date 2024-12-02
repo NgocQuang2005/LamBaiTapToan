@@ -15,6 +15,9 @@ body {
   padding: 30px;
   box-shadow: 0 0 20px rgba(116, 125, 125, 0.356);
 }
+.bg {
+  position: relative;
+}
 h1 {
   font-size: 2rem;
   margin-bottom: 20px;
@@ -54,9 +57,36 @@ h1 {
   min-width: 50px;
   min-height: 50px;
 }
+.back {
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  border: 2px solid #fff;
+  padding: 7px;
+  border-radius: 10px;
+  transition: all 0.2s linear;
+  outline: none;
+  font-weight: 600;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.back:hover {
+  background-color: #fff;
+  color: black;
+}
 @media screen and (max-width: 767.98px) {
   body {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
       url("https://inkythuatso.com/uploads/thumbnails/800/2022/06/hinh-nen-spider-man-cho-dien-thoai-15-inkythuatso-06-14-43-39.jpg");
+  }
+  .back {
+    font-size: 17px;
+    top: -30px;
+    left: -30px;
   }
 }

@@ -329,6 +329,106 @@ let questions = [
     ],
     type: "choice",
   },
+  {
+    question: "8 - ... - 3 = 2",
+    answers: [
+      { text: "4", correct: false },
+      { text: "3", correct: true },
+      { text: "2", correct: false },
+      { text: "1", correct: false },
+    ],
+    type: "choice",
+  },
+  {
+    question: "12 - ... - 5 = 4",
+    answers: [
+      { text: "2", correct: false },
+      { text: "8", correct: false },
+      { text: "6", correct: false },
+      { text: "3", correct: true },
+    ],
+    type: "choice",
+  },
+  {
+    question: "6 + ... + 3 = 12",
+    answers: [
+      { text: "2", correct: false },
+      { text: "4", correct: false },
+      { text: "3", correct: true },
+      { text: "5", correct: false },
+    ],
+    type: "choice",
+  },
+  {
+    question: "15 - ... - 4 = 6",
+    answers: [
+      { text: "8", correct: false },
+      { text: "5", correct: true },
+      { text: "7", correct: false },
+      { text: "6", correct: false },
+    ],
+    type: "choice",
+  },
+  {
+    question: "5 + ... + 2 = 10",
+    answers: [
+      { text: "4", correct: false },
+      { text: "3", correct: true },
+      { text: "5", correct: false },
+      { text: "2", correct: false },
+    ],
+    type: "choice",
+  },
+  {
+    question: "20 - ... - 7 = 8",
+    answers: [
+      { text: "20", correct: false },
+      { text: "6", correct: false },
+      { text: "15", correct: false },
+      { text: "5", correct: true },
+    ],
+    type: "choice",
+  },
+  {
+    question: "7 + ... + 4 = 14",
+    answers: [
+      { text: "2", correct: false },
+      { text: "3", correct: true },
+      { text: "4", correct: false },
+      { text: "5", correct: false },
+    ],
+    type: "choice",
+  },
+  {
+    question: "9 - ... - 1 = 4",
+    answers: [
+      { text: "3", correct: false },
+      { text: "22", correct: false },
+      { text: "4", correct: true },
+      { text: "15", correct: false },
+    ],
+    type: "choice",
+  },
+  {
+    question: "10 + ... + 1 = 15",
+    answers: [
+      { text: "2", correct: false },
+      { text: "9", correct: false },
+      { text: "4", correct: true },
+      { text: "12", correct: false },
+    ],
+    type: "choice",
+  },
+  {
+    question: "18 - ... - 6 = 8",
+    answers: [
+      { text: "5", correct: false },
+      { text: "4", correct: true },
+      { text: "13", correct: false },
+      { text: "16", correct: false },
+    ],
+    type: "choice",
+  },
 ];
 
 let currentQuestionIndex = null;
