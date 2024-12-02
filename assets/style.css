@@ -4,16 +4,16 @@ body {
   padding: 40px;
   margin: 0;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("https://mega.com.vn/media/news/1507_hinh-nen-spider-man-dep7.jpg");
+    url("https://res.ldrescdn.com/rms/ldplayer/process/img/34535f71fedb49f8ba61ac4202c11cd41719216027.webp");
   /* background-size: cover, cover, cover; */
   background-position: center, center, center;
   /* background-repeat: no-repeat, no-repeat, no-repeat; */
 }
 .container {
-  background-color: rgba(222, 208, 208, 0.274);
+  background-color: #403b3b45;
   border-radius: 15px;
   padding: 30px;
-  box-shadow: 0 0 20px rgba(159, 212, 210, 0.356);
+  box-shadow: 0 0 20px rgba(116, 125, 125, 0.356);
 }
 h1 {
   font-size: 2rem;
@@ -53,4 +53,10 @@ h1 {
 .btnCauhoi {
   min-width: 50px;
   min-height: 50px;
+}
+@media screen and (max-width: 767.98px) {
+  body {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("https://inkythuatso.com/uploads/thumbnails/800/2022/06/hinh-nen-spider-man-cho-dien-thoai-15-inkythuatso-06-14-43-39.jpg");
+  }
 }
